@@ -1,0 +1,140 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  font-family: sans-serif;
+  color: var(--dark);
+}
+:root {
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #e83e8c;
+  --orange: #fd7e14;
+  --yellow: #ffc107;
+  --teal: #20c997;
+  --cyan: #17a2b8;
+  --white: #fff;
+  --primary: #007bff;
+  --secondary: #6c757d;
+  --success: #28a745;
+  --info: #17a2b8;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --light: #f8f9fa;
+  --dark: #343a40;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+}
+.font-large {
+  font-size: 2.5rem;
+}
+.text-blue {
+  color: var(--primary);
+}
+.text-orange {
+  color: var(--orange);
+}
+.btn {
+  border: 1px solid var(--secondary);
+  border-radius: 0.7rem;
+  padding: 0.7rem;
+  background-color: transparent;
+  cursor: pointer;
+}
+.btn-large {
+  padding: 1rem 2.5rem;
+  border-radius: 2rem;
+}
+.dark {
+  background-color: var(--dark);
+  color: var(--white);
+}
+/* Navbar */
+nav {
+  display: flex;
+  flex-flow: wrap row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+.navbar-left {
+  color: var(--orange);
+}
+.navbar-fill {
+  list-style: none;
+  display: none;
+}
+.navbar-right {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  gap: 0.2rem;
+  flex-wrap: wrap;
+}
+.profile-icon {
+  border-radius: 50%;
+}
+
+/* Hero Image */
+.hero-section {
+  display: flex;
+  margin: 3rem auto;
+  justify-content: center;
+}
+.hero-content {
+  width: 42%;
+}
+.hero-content p {
+  margin: 0.5rem 0px;
+  letter-spacing: 0.5px;
+}
+/* Animation */
+.hero-sneaker-image {
+  transform: rotate(20deg);
+}
+.hero-sneaker-image:hover {
+  animation: moveforward 1s ease-in-out infinite alternate;
+}
+@keyframes moveforward {
+  to {
+    transform: rotate(12deg) scale(1.1);
+  }
+}
+
+@media (max-width: 767px) {
+  body {
+    padding: 5px;
+  }
+  .navbar-fill {
+    position: absolute;
+    background-color: var(--light);
+    width: 98%;
+    border: 1px solid var(--secondary);
+    top: 3.5rem;
+    border-radius: 0.7rem;
+    padding-left: 0px;
+    border-top: none;
+  }
+  .navbar-fill > li {
+    padding: 1rem 0.5rem;
+    text-align: center;
+  }
+  .hero-section {
+    justify-content: space-around;
+  }
+}
+
+@media (min-width: 767px) {
+  .navbar-fill {
+    display: block;
+  }
+  .navbar-fill > li {
+    display: inline;
+    padding: 0px 0.5rem;
+  }
+  .navbar-toggler {
+    display: none;
+  }
+}
