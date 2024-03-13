@@ -11,7 +11,7 @@
 
 <body>
     <nav>
-        <button class="btn navbar-toggler">
+        <button type="button" class="btn navbar-toggler">
             <img width="25px" src="images/huburger-menu-icon.png" alt="huburger-menu-icon" class="navbar-toggler-icon">
         </button>
         <h1 class="navbar-left">Thala <span class="text-blue">7.</span></h1>
@@ -23,31 +23,47 @@
             <li>Contact</li>
         </ul>
         <div class="navbar-right">
-            <input type="search" class="btn" placeholder="Search" />
-            <button class="btn">Cart 0</button>
-            <img class="profile-icon" width="50px" src="images/profile.png" alt="profile-icon" />
+            <div class="btn">
+                <i class="bi bi-search"></i>
+                <input type="text" class="search-input" placeholder="Search">
+            </div>
+            <button type="button" class="btn"><i class="bi bi-bag-fill"></i> 0</button>
+            <button type="button" class="profile-icon">
+                <i class="bi bi-person-circle "></i>
+            </button>
         </div>
     </nav>
     <section class="hero-section">
         <div class="hero-content">
-            <h1 class="font-large">7!! Thala For a <span class="text-orange">Reason!</span></h1>
+            <h1 class="font-size-36">7!! Thala For a <span class="text-orange">Reason!</span></h1>
             <p>Lorem ipsum dolor sit, amet consectetur. Pretium quisque lorem feugint justo ut orcinisi.</p>
-            <button class="btn btn-large dark">Shop Now</button>
+            <a href="product-display.html"><button type="button" class="btn btn-large dark">Shop Now</button></a>
         </div>
         <div class="hero-image">
-            <img src="images/hero-sneaker-image.webp" alt="sneaker-image" class="hero-sneaker-image" width="200px" />
+            <img src="images/hero-sneaker-image.webp" alt="sneaker-image" class="hero-sneaker-image" width="250px" />
         </div>
     </section>
     <section class="service-overview-section">
-
+        <div>
+            <h2>2k+</h2>Reviews
+        </div>
+        <div>
+            <h2>30k+</h2>Customers
+        </div>
+        <div>
+            <h2>4.5/5</h2>Rating
+        </div>
+        <div>
+            <h2>High</h2>Quality
+        </div>
     </section>
     <script>
-        // const navbarToggler = document.querySelector('.navbar-toggler');
-        // const navbarFill = document.querySelector(".navbar-fill")
+        const navbarToggler = document.querySelector('.navbar-toggler');
+        const navbarFill = document.querySelector(".navbar-fill")
 
-        // navbarToggler.addEventListener("click", function () {
-        //     navbarFill.style.display = navbarFill.style.display == "none" ? "block" : "none"
-        // })
+        navbarToggler.addEventListener("click", function () {
+            navbarFill.style.display = navbarFill.style.display == "none" ? "block" : "none"
+        })
     </script>
 </body>
 
