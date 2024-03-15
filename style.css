@@ -87,12 +87,7 @@ a {
   border-radius: 0.8rem;
   padding: 0.7rem;
   background-color: transparent;
-}
-.border-secondary {
   border: 1px solid var(--secondary);
-}
-.border-none {
-  border: none;
 }
 .border-radius-full {
   border-radius: 2rem;
@@ -150,21 +145,33 @@ nav {
   display: flex;
   align-items: center;
   align-content: center;
-  gap: 0.2rem;
+  gap: 0.5rem;
   flex-wrap: wrap;
+  justify-content: end;
+}
+.search-button {
+  display: flex;
+  border: 1px solid var(--secondary);
+  border-radius: 0.8rem;
+  align-items: center;
+  width: 60%;
+}
+.search-button > .bi {
+  padding-left: 0.5rem;
 }
 .search-input,
 .search-input:focus-visible {
   border: none;
   outline: none;
+  background-color: white;
 }
-.btn > .bi-bag-fill {
+.cart-button > .bi {
   color: var(--primary);
   font-size: large;
 }
 .profile-icon {
   border: none;
-  font-size: 2.5rem;
+  font-size: 2rem;
   background-color: transparent;
 }
 
@@ -223,8 +230,8 @@ nav {
     transform: rotate(-10deg) scale(0.7);
   }
 }
-/* Product Display Section */
 
+/* Product Display Section */
 .product-image {
   padding: 1rem;
 }
@@ -268,8 +275,16 @@ select {
 }
 
 /* Shopping Cart */
-.left-container {
+.shopping-cart-container {
   width: 95%;
+  margin: auto;
+}
+.main-container {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+.left-container {
   overflow: auto;
 }
 th {
@@ -299,26 +314,21 @@ td:first-child {
 .coupon-section > button {
   flex: 1;
 }
-
 .total-section > p {
   margin: 1rem 0px;
   display: flex;
   justify-content: space-between;
-}
-.bottom-container {
-  text-align: left;
-  padding: 10px;
 }
 .pay-now-image {
   background-color: transparent;
   position: relative;
   left: 40%;
 }
+.bottom-container {
+  text-align: center;
+}
 
 /* Payment Details */
-.payment-main-container {
-  display: flex;
-}
 .payment-left-container > .sub-container {
   width: 90%;
   margin: 2rem auto;
@@ -389,7 +399,7 @@ td:first-child {
     flex-direction: column;
     width: 100%;
   }
-  .payment-main-container,
+  .main-container,
   .coupon-section {
     display: block;
   }
